@@ -32,4 +32,15 @@ public class StackShould {
         //then
         Assertions.assertEquals(stack.pop(),"test2");
     }
+
+    @Test
+    void pop_the_elements_reverse_order_they_were_pushed() {
+        //given
+        stack.push("test");
+        stack.push("test2");
+        //when
+        //then
+        Assertions.assertEquals(stack.pop(),"test2");
+        Assertions.assertEquals(stack.pop(),"test");
+    }
 }

@@ -1,17 +1,19 @@
 package stack;
 
+import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.List;
 
 public class Stack {
-    private Object object = null;
+    private List<Object> elements = new ArrayList<>();
     public Object pop() {
-        if (object == null){
+        if (elements.isEmpty()){
             throw new EmptyStackException();
         }
-        return object;
+        return elements.remove(elements.size() -1);
     }
 
     public void push(String element) {
-        this.object = element;
+        elements.add(element);
     }
 }
