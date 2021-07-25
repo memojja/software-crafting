@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Stack {
     private List<Object> elements = new ArrayList<>();
+
     public Object pop() {
         if (elements.isEmpty()){
             throw new EmptyStackException();

@@ -8,6 +8,9 @@ import java.util.EmptyStackException;
 
 public class StackShould {
 
+    public static final String TEST = "test";
+    public static final String TEST_2 = "test2";
+
     private Stack stack;
 
     @BeforeEach
@@ -26,21 +29,21 @@ public class StackShould {
     @Test
     void pop_the_last_element_pushed() {
         //given
-        stack.push("test");
-        stack.push("test2");
+        stack.push(TEST);
+        stack.push(TEST_2);
         //when
         //then
-        Assertions.assertEquals(stack.pop(),"test2");
+        Assertions.assertEquals(stack.pop(),TEST_2);
     }
 
     @Test
     void pop_the_elements_reverse_order_they_were_pushed() {
         //given
-        stack.push("test");
-        stack.push("test2");
+        stack.push(TEST);
+        stack.push(TEST_2);
         //when
         //then
-        Assertions.assertEquals(stack.pop(),"test2");
-        Assertions.assertEquals(stack.pop(),"test");
+        Assertions.assertEquals(stack.pop(), TEST_2);
+        Assertions.assertEquals(stack.pop(),TEST);
     }
 }
