@@ -60,5 +60,18 @@ if (elements.isEmpty()){
 
 
 ## Tdd - Roman Numerals Converter Kata
+
+````java
+    @ParameterizedTest
+    @CsvSource(value = {
+            "1, I" ...
+````
+
++ In cases like this, use a parameterised test. They are good for when you have multiple examples of the same behaviour.
++ Here we assume that Roman Numerals is a common domain and the mechanics of the numeric system does not need to be explained by tests.
++ If we were creating our own numeric system, we probably would create separate tests explaining its different characteristics.
+
 ## Tdd with Mocks - Payment Service Kata
+
+
 ## Acceptance Tests - Bank Kata
