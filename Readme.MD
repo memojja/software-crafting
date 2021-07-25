@@ -4,14 +4,14 @@ These notes taken from Sandro Mancuso's training who author of The Software Craf
 This course includes flowing contents
 
 + TDD Lifecycle and Naming
-+ Classicist TDD
-+ Outside-In TDD
++ Classicist TDD / Chicago School TDD
++ Outside-In TDD / London school TDD
 + Acceptance tests
 + Testing & Refactoring Legacy Code
 
 ## Tdd - Stack Kata
 
-1. ####Test Names
+1. ### Test Names
 
 ```java 
     @Test
@@ -27,7 +27,7 @@ This course includes flowing contents
 +  Test names clearly explain the behavior of a Stack, even for those who are not so technical.
 +  Domain language used in the name of the methods: pop and push. They are both used as verb.
 
-2. #### Exception Name
+2. ### Exception Name
 
 ```java 
 if (elements.isEmpty()){
@@ -37,7 +37,7 @@ if (elements.isEmpty()){
 
 +  Exceptions are part of the contract. It allows client to understand what went wrong.
 +  Exceptions should be clear enough to avoid to developers to have to debug the code. They should not look inside our code in order to understand what went wrong.
-3. #### Constants & Clean Tests
+3. ### Constants & Clean Tests
 
 ````java
     public static final String TEST = "test";
@@ -49,10 +49,10 @@ if (elements.isEmpty()){
 +  Only code that is important for the test remains in the test. Everything else is removed.
 +  Tests must tell a story and be very focused.
 
-4. #### Consistency
+4. ### Consistency
 + **Elements:** Name of parameters, constants, internal attributes uses the same language.
 
-5. #### How many tests?
+5. ### How many tests?
 
 + Enough so that you and your pair are confident you have all the functionality covered and a bug cannot be introduced without breaking a test.
 + Push 2, pop 3: This test should go green if introduced now. Every time a test goes green we should ask if we need the test. In doubt, write the test.
